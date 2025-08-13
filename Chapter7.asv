@@ -1,0 +1,21 @@
+I = imread("madeline.jpg");
+
+
+
+bbox = [788 367 953 959];
+label = "Madeline";
+
+I = insertObjectAnnotation(I, 'rectangle', bbox, label, ...
+    LineWidth=20, ...
+    FontSize=72);
+
+
+imgds = imageDatastore('datasets\petImages\', 'IncludeSubfolders',true);
+
+load petGT.mat
+
+ab = anchorBoxMaker(petGT, 5);
+
+
+net = resnet
+

@@ -1,0 +1,5 @@
+I = imrad("dog.jpg");
+
+load trainingDataColor.mat
+
+trainingData.File = strcat('datasets/ColorCast', )
